@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Pomodoro</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>pomodoro</h1>
+        <div class="navbar">
+            <!-- <div class="active_bg"></div> -->
+            <button  class="pomodoro"><div>pomodoro</div></button>
+            <button class="short__break"><div>short break</div></button>
+            <button  class="long__break"><div>long break</div></button>
+
+        </div>
+        <div class="circle">
+            
+            <div class="bg__circle">
+                <div class="timer">
+                   <div class="pm display">
+                        <div class="font" id="m"></div>
+                        <span class="font">:</span>
+                        <div class="font" id="s"></div>
+                   </div>
+                   <div class="short">
+                        <div class="font" id="m">05</div>
+                        <span class="font">:</span>
+                        <div class="font" id="s">00</div>
+                    </div>
+                    <div class="long">
+                        <div class="font" id="m"></div>
+                        <span class="font">:</span>
+                        <div class="font" id="s"></div>
+                    </div>
+                </div>
+                
+                <div class="start btn">Start</div>
+                <div class="pause btn">Pause</div>
+                <div class="restart btn">Restart</div>
+            </div>
+        </div>
+        <div class="system">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0377 15.365L26.9653 17.682C27.2289 17.899 27.3053 18.2771 27.1318 18.578L24.3567 23.429C24.1833 23.73 23.8226 23.849 23.5104 23.73L20.0555 22.323C19.3409 22.883 18.5569 23.345 17.7106 23.702L17.1903 27.412C17.1348 27.741 16.8503 28 16.5034 28H10.9534C10.6065 28 10.3221 27.741 10.2666 27.412L9.74627 23.702C8.89991 23.345 8.11598 22.8761 7.40139 22.323L3.94648 23.73C3.63429 23.856 3.27358 23.73 3.10012 23.429L0.325071 18.578C0.15161 18.27 0.227967 17.892 0.491573 17.682L3.4192 15.365C3.36373 14.917 3.3221 14.462 3.3221 14C3.3221 13.538 3.36373 13.083 3.4192 12.635L0.491573 10.318C0.227967 10.101 0.15161 9.72302 0.325071 9.42199L3.10019 4.57099C3.27358 4.26996 3.63436 4.15098 3.94655 4.26996L7.40146 5.67697C8.11598 5.11699 8.89997 4.65499 9.74633 4.29799L10.2667 0.588001C10.3221 0.259022 10.6066 0 10.9535 0H16.5035C16.8504 0 17.1348 0.259022 17.1973 0.588001L17.7176 4.29799C18.564 4.65499 19.3479 5.12394 20.0625 5.67697L23.5174 4.26996C23.8296 4.14396 24.1903 4.26996 24.3637 4.57099L27.1388 9.42199C27.3123 9.72997 27.2359 10.108 26.9723 10.318L24.0377 12.635C24.0932 13.083 24.1348 13.538 24.1348 14C24.1348 14.462 24.0932 14.917 24.0377 15.365ZM8.87213 14C8.87213 16.709 11.0436 18.9 13.7285 18.9C16.4133 18.9 18.5848 16.7091 18.5848 14.0001C18.5848 11.2911 16.4133 9.10004 13.7285 9.10004C11.0436 9.10004 8.87213 11.291 8.87213 14Z" fill="#D7E0FF"/>
+                </svg>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal__header">
+          <h2>Settings</h2>
+          <button class="remove__btn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="Group 5" opacity="0.5">
+                <path id="Combined Shape" fill-rule="evenodd" clip-rule="evenodd" d="M13.364 2.0502L11.9497 0.635986L6.99999 5.58573L2.05025 0.635986L0.636032 2.0502L5.58578 6.99995L0.636032 11.9497L2.05025 13.3639L6.99999 8.41416L11.9497 13.3639L13.364 11.9497L8.41421 6.99995L13.364 2.0502Z" fill="#1E213F"/>
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div class="settings__about">
+          <div class="setting__time">
+            <h3>TIME (MINUTES)</h3>
+            <div class="inputs">
+              <div class="pomodoro">
+                <label for="number">pomodoro</label>
+                <div class="input__break">
+                  <input type="number" id="pomodoro" value="25">
+                  <div class="change__pm__value btn__next">
+                    <div class="next">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                        <path d="M1 6L7 2L13 6" stroke="#1E213F" stroke-opacity="0.25" stroke-width="2"/>
+                      </svg>
+                    </div>
+                    <div class="prew">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                        <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pomodoro">
+                <label for="number">short break</label>
+                <div class="input__break">
+                  <input type="number" id="shortBreak" value="5">
+                  <div class="change__short__value btn__next">
+                    <div class="next">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                        <path d="M1 6L7 2L13 6" stroke="#1E213F" stroke-opacity="0.25" stroke-width="2"/>
+                      </svg>
+                    </div>
+                    <div class="prew">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                        <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pomodoro">
+                <label for="number">long break</label>
+                <div class="input__break">
+                  <input type="number" id="longBreak" value="15">
+                  <div class="change__long__value btn__next">
+                    <div class="next">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                        <path d="M1 6L7 2L13 6" stroke="#1E213F" stroke-opacity="0.25" stroke-width="2"/>
+                      </svg>
+                    </div>
+                    <div class="prew">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7" fill="none">
+                        <path d="M1 1L7 5L13 1" stroke="#1E213F" stroke-opacity="0.25" stroke-width="2"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="setting__font">
+            <h3>FONT</h3>
+            <div class="fonts">
+              <div class="font__one">Aa</div>
+              <div class="font__one font__two">Aa</div>
+              <div class="font__one font__three">Aa</div>
+            </div>
+          </div>
+          <div class="setting__color">
+            <h3>COLOR</h3>
+            <div class="colors">
+              <div class="color__one">
+                <img src="./img/check.svg" alt="check">
+              </div>
+              <div class="color__one color__two">
+                <img src="./img/check.svg" alt="check">
+              </div>
+              <div class="color__one color__three">
+                <img src="./img/check.svg" alt="check">
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="apply__btn">Apply</button>
+      </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
